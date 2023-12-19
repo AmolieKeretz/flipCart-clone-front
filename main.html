@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="head-nav">
+        <nav>
+            <div class="search-logo">
+                <img src="logo.png" alt="logo">
+                <div class="search-bar">
+                    <i class="sch fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="searchIn" class="search-in">
+                </div>
+            </div>
+            <div class="nav-bar" id="navBar">
+                <i class="fa-solid fa-xmark drop-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-person-shelter"></i><span>Become a Seller</span></a></li>
+                    <li><a href="#" class="angle-rotation"><i class="fa-regular fa-user"></i><span>Sign in<i class="fa-solid fa-angle-down angle"></i></span></a>
+                        <div class="drop-down1">
+                            <ul>
+                                <span style="font: 15px; margin: 5px;">New customer? <a href="#" style="color: blue;">Sign up</a></span>
+                                <hr>
+                                <li><a href="#"><i class="fa-regular fa-user"></i><span>My Profile</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-plus"></i><span>Flipkart Plus Zone</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-box-open"></i><span>Orders</span></a></li>
+                                <li><a href="#"><i class="fa-regular fa-heart"></i><span>Wishlist</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-gift"></i><span>Rewards</span></a></li>
+                                <li><a href="#"><i class="fa-brands fa-cc-apple-pay"></i><span>Gift Cards</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"><i class="fa-solid fa-cart-arrow-down" style="padding-top: 15px;"></i><span>Cart</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        <div class="drop-down2">
+                            <ul>
+                                <li><a href="#"><i class="fa-regular fa-bell"></i><span>Notification Prefrence</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-headset"></i><span>34x7 Customer Care</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-arrow-trend-up"></i><span>Advertise</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-download"></i><span>Download App</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>   
+        </nav>
+        <i class="fa-solid fa-bars drop-close close" onclick="showMenu()"style="padding-top: 15px"></i>    
+    </header>
+    <main>
+        <div class="image-carousel">
+            <div class="left" id="prevButton">
+                <i class="fa-solid fa-chevron-left" ></i>
+            </div>
+            <div class="carousel-container">
+              <img src="img/banner1.webp" alt="Image 1">
+              <img src="img/banner2.webp" alt="Image 2">
+              <img src="img/banner3.webp" alt="Image 3">
+              <img src="img/banner4.webp" alt="Image 1">
+            </div>
+            <div class="right" id="nextButton">
+                <i class="fa-solid fa-angle-right" ></i>
+            </div>
+        </div>
+
+        <div class="item-list">
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item1.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item2.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item3.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item4.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item5.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item6.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item7.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item8.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item9.webp" alt="img">
+                </div>
+            </a>
+            <a href="#">
+                <div class="item-box">
+                    <img src="img/item10.webp" alt="img">
+                </div>
+            </a>
+            
+        </div>
+          
+    </main>
+
+    
+
+
+<script>
+    var navBar = document.getElementById("navBar");
+    function hideMenu(){
+        navBar.style.right = "-200px";
+    }
+    function showMenu(){
+        navBar.style.right = "0";
+    }
+
+    // JavaScript click change Image
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-container img');
+    const carouselContainer = document.querySelector('.carousel-container');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+    }
+
+    function updateCarousel() {
+        const translateX = -currentIndex * 100; // 100% for each image
+        carouselContainer.style.transform = `translateX(${translateX}%)`;
+    }
+
+    // Add event listeners to the buttons
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
+
+// auto swap
+        
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        const translateX = -currentIndex * 100; // 100% for each image
+        carouselContainer.style.transform = `translateX(${translateX}%)`;
+        }
+
+    // Automatically advance to the next image every 3 seconds (adjust as needed)
+    setInterval(showNextImage, 3000);
+    
+    //remove image 1990px
+    // Select the image container and all images inside it
+    const imageContainer = document.getElementById('item-list');
+    const box = imageContainer.querySelectorAll('item-box');
+
+    let totalWidth = 0;
+
+    // Calculate the total width of the images
+    imageContainer => {
+        totalWidth += imageContainer.width;
+    };
+
+    // Check if the total width exceeds or equals 1990 pixels
+    if (totalWidth <= 700) {
+        // Remove every 2nd image
+        imageContainer.removeChild(box[2]);
+    }
+ 
+
+
+</script>
+
+
+
+
+
+    
+
+</body>
+</html>
